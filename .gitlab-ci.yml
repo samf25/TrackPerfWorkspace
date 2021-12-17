@@ -27,7 +27,7 @@ generate:
   stage: build
   script:
     - ls /opt/ilcsoft/muonc/init_ilcsoft.sh 
-    - source /opt/ilcsoft/muonc/init_ilcsoft.sh
+    - source /opt/ilcsoft/muonc/init_ilcsoft.sh || yes
     - echo "got it? ${?}"
     - git clone https://github.com/kkrizka/MuonCollider-docker.git
     - ddsim --steeringFile MuonCollider-docker.test/sim_steer_muonGun_MuColl_v1.py

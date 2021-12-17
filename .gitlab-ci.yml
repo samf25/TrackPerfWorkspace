@@ -13,6 +13,7 @@ build:
   stage: build
   script:
     - source /opt/ilcsoft/muonc/init_ilcsoft.sh
+    - ls
     - cmake -S . -B build
     - cmake --build build
   artifacts:
@@ -25,7 +26,9 @@ generate:
   extends: .base
   stage: build
   script:
+    - ls /opt/ilcsoft/muonc/init_ilcsoft.sh 
     - source /opt/ilcsoft/muonc/init_ilcsoft.sh
+    - echo "got it? ${?}"
     - git clone https://github.com/kkrizka/MuonCollider-docker.git
     - ddsim --steeringFile MuonCollider-docker.test/sim_steer_muonGun_MuColl_v1.py
   artifacts:

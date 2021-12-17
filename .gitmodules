@@ -1,0 +1,3 @@
+[submodule "packages/TrackPerf"]
+	path = packages/TrackPerf
+	url = https://gitlab.cern.ch/berkeleylab/MuonCollider/TrackPerf.git

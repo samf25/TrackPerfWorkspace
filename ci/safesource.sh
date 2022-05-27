@@ -10,10 +10,10 @@ if [ ${#} == 0 ]; then
 fi
 
 set +e
-source ${@}
+"${@}"
 CODE=${?}
 set -e
 
 if [ ${CODE} != 0 ]; then
-    return ${CODE}
+    exit ${CODE}
 fi

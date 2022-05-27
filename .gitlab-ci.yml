@@ -40,7 +40,7 @@ run:
   extends: .base
   stage: run
   script:
-    - source ci/safesource.sh source setup.sh
+    - source ci/safesource.sh source setup.sh build/
     - Marlin ${MYWORKSPACE}/example/actsseedckf_steer.xml --global.LCIOInputFiles=muonGun_sim_MuColl_v1.slcio
   artifacts:
     name: output

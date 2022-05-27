@@ -1,0 +1,51 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: normal
+
+stages:
+  - build
+  - run
+
+.base:
+  image: infnpd/mucoll-ilc-framework:1.6-centos8
+
+build:
+  extends: .base
+  stage: build
+  script:
+    - source /opt/ilcsoft/muonc/init_ilcsoft.sh || yes
+    - ls
+    - cmake -S . -B build
+    - cmake --build build
+  artifacts:
+    name: build
+    when: always
+    paths:
+      - $CI_PROJECT_DIR/build
+    expire_in: 1 day
+generate:
+  extends: .base
+  stage: build
+  script:
+    - ls /opt/ilcsoft/muonc/init_ilcsoft.sh 
+    - source /opt/ilcsoft/muonc/init_ilcsoft.sh || yes
+    - git clone https://github.com/kkrizka/MuonCollider-docker.git
+    - ddsim --steeringFile MuonCollider-docker/test/sim_steer_muonGun_MuColl_v1.py
+  artifacts:
+    name: input
+    when: always
+    paths:
+      - $CI_PROJECT_DIR/muonGun_sim_MuColl_v1.slcio
+    expire_in: 1 day
+run:
+  extends: .base
+  stage: run
+  script:
+    - source ci/safesource.sh source setup.sh build/
+    - Marlin ${MYWORKSPACE}/example/actsseedckf_steer.xml --global.LCIOInputFiles=muonGun_sim_MuColl_v1.slcio
+  artifacts:
+    name: output
+    when: always
+    paths:
+      - $CI_PROJECT_DIR/actsseedckf.root
+    expire_in: 30 day
+

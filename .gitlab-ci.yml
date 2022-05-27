@@ -41,6 +41,7 @@ run:
   stage: run
   script:
     - ls
+    - set -x
     - source setup.sh
     - Marlin ${MYWORKSPACE}/example/actsseedckf_steer.xml --global.LCIOInputFiles=muonGun_sim_MuColl_v1.slcio
   artifacts:

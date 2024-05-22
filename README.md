@@ -10,16 +10,16 @@ Collection of packages for testing tracking performance in a muon collider.
 ## Setup Instructions
 
 ### Container
-All commands should be run inside the `infnpd/mucoll-ilc-framework:1.6-centos8` image.
+All commands should be run inside the `gitlab-registry.cern.ch/muon-collider/mucoll-deploy/mucoll:2.8-patch2-el9` image.
 
 #### Singularity
 ```bash
-singularity shell --cleanenv docker://infnpd/mucoll-ilc-framework:1.6-centos8
+apptainer shell --cleanenv -B/disk/moose docker://gitlab-registry.cern.ch/muon-collider/mucoll-deploy/mucoll:2.8-patch2-el9
 ```
 
 #### Shifter
 ```bash
-shifter --image infnpd/mucoll-ilc-framework:1.6-centos8 /bin/bash
+shifter --image gitlab-registry.cern.ch/muon-collider/mucoll-deploy/mucoll:2.8-patch2-el9 /bin/bash
 ```
 
 ### Build Instructions
@@ -32,7 +32,7 @@ cmake --build build
 
 ### Setup Script
 The included `setup.sh` script is useful for defining all paths for the binaries built by the workspace. At the current stage, it setups the following:
-- ILC software via `init_ilcsoft.sh`
+- ILC software via `setup_mucoll.sh`
 - External binaries/libraries found in `exts`.
 - Add all package libraries to `MARLIN_DLL`.
 - Export `MYBUILD` variable with absolute path the build directory.

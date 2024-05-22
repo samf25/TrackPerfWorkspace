@@ -6,13 +6,13 @@ stages:
   - run
 
 .base:
-  image: infnpd/mucoll-ilc-framework:1.6-centos8
+  image: gitlab-registry.cern.ch/muon-collider/mucoll-deploy/mucoll:2.8-patch2-el9
 
 build:
   extends: .base
   stage: build
   script:
-    - source /opt/ilcsoft/muonc/init_ilcsoft.sh || yes
+    - source /opt/setup_mucoll.sh || yes
     - ls
     - cmake -S . -B build
     - cmake --build build
@@ -26,8 +26,7 @@ generate:
   extends: .base
   stage: build
   script:
-    - ls /opt/ilcsoft/muonc/init_ilcsoft.sh 
-    - source /opt/ilcsoft/muonc/init_ilcsoft.sh || yes
+    - source /opt/setup_mucoll.sh || yes
     - git clone https://github.com/kkrizka/MuonCollider-docker.git
     - ddsim --steeringFile MuonCollider-docker/test/sim_steer_muonGun_MuColl_v1.py
   artifacts:

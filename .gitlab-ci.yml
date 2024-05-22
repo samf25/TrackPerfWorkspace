@@ -26,6 +26,7 @@ generate:
   extends: .base
   stage: build
   script:
+    - dnf -y install wget
     - wget https://nbartosi.web.cern.ch/tutorial_20230705/sim_Hbb/output_sim.slcio
   artifacts:
     name: input

@@ -21,7 +21,7 @@ export MYBUILD=$(realpath ${MYBUILD})
 
 #
 # Main software
-source /opt/ilcsoft/muonc/init_ilcsoft.sh
+source /opt/setup_mucoll.sh
 
 #
 # Add exts

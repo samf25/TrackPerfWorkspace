@@ -1,6 +1,6 @@
 [submodule "packages/TrackPerf"]
 	path = packages/TrackPerf
-	url = https://gitlab.cern.ch/berkeleylab/MuonCollider/TrackPerf.git
+	url = https://github.com/MuonColliderSoft/TrackPerf.git
 [submodule "packages/ACTSTracking"]
 	path = packages/ACTSTracking
 	url = https://github.com/MuonColliderSoft/ACTSTracking.git

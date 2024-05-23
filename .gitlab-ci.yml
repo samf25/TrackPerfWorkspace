@@ -36,10 +36,9 @@ generate:
 run:
   extends: .base
   stage: run
-  variables:
-    MUCOLL_GEO: /opt/spack/opt/spack/linux-almalinux9-x86_64/gcc-11.3.1/lcgeo-0.18.1-rv5ol74iupibxoku3ktvpgjseph6nj5k/share/lcgeo/compact/MuColl/MuColl_v1/MuColl_v1.xml
   script:
     - source ci/safesource.sh source setup.sh build/
+    - export MUCOLL_GEO=/opt/spack/opt/spack/linux-almalinux9-x86_64/gcc-11.3.1/lcgeo-0.18.1-rv5ol74iupibxoku3ktvpgjseph6nj5k/share/lcgeo/compact/MuColl/MuColl_v1/MuColl_v1.xml
     - Marlin ${MYWORKSPACE}/example/actsseedckf_steer.xml --InitDD4hep.DD4hepXMLFile=${MUCOLL_GEO} --global.LCIOInputFiles=output_sim.slcio
   artifacts:
     name: output

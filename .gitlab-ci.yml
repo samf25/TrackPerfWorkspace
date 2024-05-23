@@ -26,7 +26,7 @@ generate:
   extends: .base
   stage: build
   before_script:
-    - yum -i install wget
+    - yum -y install wget
   script:
     - wget https://nbartosi.web.cern.ch/tutorial_20230705/sim_Hbb/output_sim.slcio
   artifacts:

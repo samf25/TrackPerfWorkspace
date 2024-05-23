@@ -26,8 +26,7 @@ generate:
   extends: .base
   stage: build
   script:
-    - whoami
-    - sudo yum -y install wget
+    - curl https://nbartosi.web.cern.ch/tutorial_20230705/sim_Hbb/output_sim.slcio --output ./output_sim.slcio
     - wget https://nbartosi.web.cern.ch/tutorial_20230705/sim_Hbb/output_sim.slcio
   artifacts:
     name: input

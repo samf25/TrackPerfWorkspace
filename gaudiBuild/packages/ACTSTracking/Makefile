@@ -237,6 +237,54 @@ src/ACTSDuplicateRemoval.cxx.s:
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/gaudiBuild && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/src/ACTSDuplicateRemoval.cxx.s
 .PHONY : src/ACTSDuplicateRemoval.cxx.s
 
+src/ACTSMergeHitCollections.o: src/ACTSMergeHitCollections.cxx.o
+.PHONY : src/ACTSMergeHitCollections.o
+
+# target to build an object file
+src/ACTSMergeHitCollections.cxx.o:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/gaudiBuild && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/src/ACTSMergeHitCollections.cxx.o
+.PHONY : src/ACTSMergeHitCollections.cxx.o
+
+src/ACTSMergeHitCollections.i: src/ACTSMergeHitCollections.cxx.i
+.PHONY : src/ACTSMergeHitCollections.i
+
+# target to preprocess a source file
+src/ACTSMergeHitCollections.cxx.i:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/gaudiBuild && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/src/ACTSMergeHitCollections.cxx.i
+.PHONY : src/ACTSMergeHitCollections.cxx.i
+
+src/ACTSMergeHitCollections.s: src/ACTSMergeHitCollections.cxx.s
+.PHONY : src/ACTSMergeHitCollections.s
+
+# target to generate assembly for a file
+src/ACTSMergeHitCollections.cxx.s:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/gaudiBuild && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/src/ACTSMergeHitCollections.cxx.s
+.PHONY : src/ACTSMergeHitCollections.cxx.s
+
+src/ACTSMergeRelationCollections.o: src/ACTSMergeRelationCollections.cxx.o
+.PHONY : src/ACTSMergeRelationCollections.o
+
+# target to build an object file
+src/ACTSMergeRelationCollections.cxx.o:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/gaudiBuild && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/src/ACTSMergeRelationCollections.cxx.o
+.PHONY : src/ACTSMergeRelationCollections.cxx.o
+
+src/ACTSMergeRelationCollections.i: src/ACTSMergeRelationCollections.cxx.i
+.PHONY : src/ACTSMergeRelationCollections.i
+
+# target to preprocess a source file
+src/ACTSMergeRelationCollections.cxx.i:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/gaudiBuild && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/src/ACTSMergeRelationCollections.cxx.i
+.PHONY : src/ACTSMergeRelationCollections.cxx.i
+
+src/ACTSMergeRelationCollections.s: src/ACTSMergeRelationCollections.cxx.s
+.PHONY : src/ACTSMergeRelationCollections.s
+
+# target to generate assembly for a file
+src/ACTSMergeRelationCollections.cxx.s:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/gaudiBuild && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTracking.dir/src/ACTSMergeRelationCollections.cxx.s
+.PHONY : src/ACTSMergeRelationCollections.cxx.s
+
 src/ACTSSeededCKFTrackingAlg.o: src/ACTSSeededCKFTrackingAlg.cxx.o
 .PHONY : src/ACTSSeededCKFTrackingAlg.o
 
@@ -377,6 +425,12 @@ help:
 	@echo "... src/ACTSDuplicateRemoval.o"
 	@echo "... src/ACTSDuplicateRemoval.i"
 	@echo "... src/ACTSDuplicateRemoval.s"
+	@echo "... src/ACTSMergeHitCollections.o"
+	@echo "... src/ACTSMergeHitCollections.i"
+	@echo "... src/ACTSMergeHitCollections.s"
+	@echo "... src/ACTSMergeRelationCollections.o"
+	@echo "... src/ACTSMergeRelationCollections.i"
+	@echo "... src/ACTSMergeRelationCollections.s"
 	@echo "... src/ACTSSeededCKFTrackingAlg.o"
 	@echo "... src/ACTSSeededCKFTrackingAlg.i"
 	@echo "... src/ACTSSeededCKFTrackingAlg.s"

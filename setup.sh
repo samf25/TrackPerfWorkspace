@@ -21,7 +21,7 @@ export MYBUILD=$(realpath ${MYBUILD})
 
 #
 # Main software
-source /opt/setup_mucoll.sh
+#source /opt/setup_mucoll.sh
 
 #
 # Add exts

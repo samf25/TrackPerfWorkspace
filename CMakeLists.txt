@@ -15,6 +15,7 @@ FIND_PACKAGE( Acts REQUIRED COMPONENTS Core PluginJson PluginTGeo )
 FIND_PACKAGE( k4FWCore REQUIRED )
 INCLUDE(GNUInstallDirs)
 
+
 set(CMAKE_CXX_STANDARD 17 CACHE STRING "")
 
 ### DOCUMENTATION ###################################
@@ -34,10 +35,3 @@ FOREACH(package ${packages})
   ENDIF()
 ENDFOREACH()
 
-install(EXPORT ${PROJECT_NAME}Targets
-	NAMESPACE ${PROJECT_NAME}::
-	FILE "${PROJECT_NAME}Tragets.cmake"
-	DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}/"
-)
-
-include(cmake/CreateProjectConfig.cmake)

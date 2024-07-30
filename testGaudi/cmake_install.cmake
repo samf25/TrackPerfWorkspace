@@ -80,7 +80,37 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TrackPerfWorkspace" TYPE FILE FILES "/isilon/export/home/sferrar2/TrackPerfWorkspace/cmake/TrackPerfWorkspaceConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TrackPerfWorkspace" TYPE FILE FILES
+    "/isilon/export/home/sferrar2/TrackPerfWorkspace/testGaudi/TrackPerfWorkspaceConfig.cmake"
+    "/isilon/export/home/sferrar2/TrackPerfWorkspace/testGaudi/TrackPerfWorkspaceConfigVersion.cmake"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/TrackPerfWorkspace" TYPE FILE FILES "/isilon/export/home/sferrar2/TrackPerfWorkspace/testGaudi/include/TrackPerfWorkspace/TrackPerfWorkspaceVersion.h")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/TrackPerfWorkspace/TrackPerfWorkspaceTargets.cmake")
+    file(DIFFERENT _cmake_export_file_changed FILES
+         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/TrackPerfWorkspace/TrackPerfWorkspaceTargets.cmake"
+         "/isilon/export/home/sferrar2/TrackPerfWorkspace/testGaudi/CMakeFiles/Export/83a9ad872c68a12851679fd278188379/TrackPerfWorkspaceTargets.cmake")
+    if(_cmake_export_file_changed)
+      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/TrackPerfWorkspace/TrackPerfWorkspaceTargets-*.cmake")
+      if(_cmake_old_config_files)
+        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/TrackPerfWorkspace/TrackPerfWorkspaceTargets.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
+        unset(_cmake_old_config_files_text)
+        file(REMOVE ${_cmake_old_config_files})
+      endif()
+      unset(_cmake_old_config_files)
+    endif()
+    unset(_cmake_export_file_changed)
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TrackPerfWorkspace" TYPE FILE FILES "/isilon/export/home/sferrar2/TrackPerfWorkspace/testGaudi/CMakeFiles/Export/83a9ad872c68a12851679fd278188379/TrackPerfWorkspaceTargets.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TrackPerfWorkspace" TYPE FILE FILES "/isilon/export/home/sferrar2/TrackPerfWorkspace/testGaudi/CMakeFiles/Export/83a9ad872c68a12851679fd278188379/TrackPerfWorkspaceTargets-noconfig.cmake")
+  endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

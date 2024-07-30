@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/CMakeLists.txt"
+  "/isilon/export/home/sferrar2/TrackPerfWorkspace/cmake/CreateProjectConfig.cmake"
+  "/isilon/export/home/sferrar2/TrackPerfWorkspace/cmake/Project_Config_Template.cmake.in"
+  "/isilon/export/home/sferrar2/TrackPerfWorkspace/cmake/package_version_template.h.in"
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/CMakeLists.txt"
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/data/CMakeLists.txt"
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/example/CMakeLists.txt"
@@ -87,6 +90,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/clhep/2.4.7.1-f7bkzk/lib/CLHEP-2.4.7.1/CLHEPConfigVersion.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/clhep/2.4.7.1-f7bkzk/lib/CLHEP-2.4.7.1/CLHEPLibraryDepends-release.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/clhep/2.4.7.1-f7bkzk/lib/CLHEP-2.4.7.1/CLHEPLibraryDepends.cmake"
+  "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeCInformation.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeCXXInformation.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake"
@@ -94,6 +98,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeGenericSystem.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake"
+  "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeParseArguments.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake"
@@ -124,6 +129,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/Platform/Linux.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/Platform/UnixPaths.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/SelectLibraryConfigurations.cmake"
+  "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/dd4hep/1.29-yo6bcn/cmake/DD4hep.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/dd4hep/1.29-yo6bcn/cmake/DD4hepBuild.cmake"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/dd4hep/1.29-yo6bcn/cmake/DD4hepConfig-targets-release.cmake"
@@ -268,6 +274,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "include/TrackPerfWorkspace/TrackPerfWorkspaceVersion.h"
+  "TrackPerfWorkspaceConfig.cmake"
+  "TrackPerfWorkspaceConfigVersion.cmake"
   "trackperfworkspaceenv.sh"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "packages/ACTSTracking/config.h"

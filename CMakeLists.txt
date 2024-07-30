@@ -15,6 +15,8 @@ FIND_PACKAGE( Acts REQUIRED COMPONENTS Core PluginJson PluginTGeo )
 FIND_PACKAGE( k4FWCore REQUIRED )
 INCLUDE(GNUInstallDirs)
 
+set(CMAKE_CXX_STANDARD 17 CACHE STRING "")
+
 ### DOCUMENTATION ###################################
 OPTION( INSTALL_DOC "Set to OFF to skip build/install Documentation" OFF )
 
@@ -38,4 +40,4 @@ install(EXPORT ${PROJECT_NAME}Targets
 	DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}/"
 )
 
-gaudi_install(CMAKE cmake/${PROJECT_NAME}Config.cmake)
+include(cmake/CreateProjectConfig.cmake)

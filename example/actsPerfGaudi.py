@@ -1,43 +1,53 @@
 from Gaudi.Configuration import *
-from Configurables import EventDataSvc, ApplicationMgr, PodioInput, PodioOutput, GeoSvc, k4DataSvc
+from Configurables import EventDataSvc, ApplicationMgr, PodioInput, PodioOutput, k4DataSvc#, GeoSvc
 from Configurables import ACTSMergeHitCollections, ACTSMergeRelationCollections, ACTSSeededCKFTrackingAlg
 from Configurables import ACTSDuplicateRemoval, FilterTracksAlg, TrackTruthAlg, TrackPerfHistAlg
+from Configurables import MarlinProcessorWrapper
+
 
 # Read in Simulation Output Data
 podioevent = k4DataSvc("EventDataSvc", input = "output_digi.edm4hep.root")
 podioinput = PodioInput("PodioReader", 
 	collections= [
-	"VBTrackerHits", "IBTrackerHits", "OBTrackerHits", 
-	"VETrackerHits", "IETrackerHits", "OETrackerHits", 
-	"VBTrackerHitsRelations", "IBTrackerHitsRelations", 
-	"OBTrackerHitsRelations", "VETrackerHitsRelations", 
-	"IETrackerHitsRelations", "OETrackerHitsRelations", 
+	"VXDBarrelHits", "ITBarrelHits", "OTBarrelHits", 
+	"VXDEndcapHits", "ITEndcapHits", "OTEndcapHits", 
+	"VXDBarrelHitsRelations", "ITBarrelHitsRelations", 
+	"OTBarrelHitsRelations", "VXDEndcapHitsRelations", 
+	"ITEndcapHitsRelations", "OTEndcapHitsRelations", 
 	"MCParticle"], OutputLevel = DEBUG)
 
 # Feed in Dectector Geometry
-detectors_to_use = ['file:/isilon/export/home/sferrar2/Container/detector-simulation/geometries/MuColl_v1.0.1/MuColl_v1.xml',]
+detectors_to_use = ['/isilon/export/home/sferrar2/Container/detector-simulation/geometries/MuColl_v1.0.1/MuColl_v1.xml',]
 #geoservice = GeoSvc("GeoSvc", detectors = detectors_to_use, OutputLevel = INFO)
+
+InitDD4hep = MarlinProcessorWrapper("InitDD4hep")
+InitDD4hep.OutputLevel = WARNING
+InitDD4hep.ProcessorType = "InitializeDD4hep"
+InitDD4hep.Parameters = {
+                         "DD4hepXMLFile": detectors_to_use,
+                         "EncodingStringParameterName": ["GlobalTrackerReadoutID"]
+                         }
 
 # Merge Track Collections into One Collection
 MyMergeTracks = ACTSMergeHitCollections("MergeTrackHits",
-                            InputCollection1 = "VBTrackerHits",
-                            InputCollection2 = "IBTrackerHits",
-                            InputCollection3 = "OBTrackerHits",
-                            InputCollection4 = "VETrackerHits",
-                            InputCollection5 = "IETrackerHits",
-                            InputCollection6 = "OETrackerHits",
+                            InputCollection1 = "VXDBarrelHits",
+                            InputCollection2 = "ITBarrelHits",
+                            InputCollection3 = "OTBarrelHits",
+                            InputCollection4 = "VXDEndcapHits",
+                            InputCollection5 = "ITEndcapHits",
+                            InputCollection6 = "OTEndcapHits",
                             OutputCollection = "MergedTrackerHits")
 MyMergeTracks.OutputLevel = WARNING
 
 # Merge Track Relation Collections into One Collection
 MyMergeAssociations = ACTSMergeRelationCollections("MergeAssociations", 
-                                  InputCollection1 = "VBTrackerHitsRelations",
-                                  InputCollection2 = "IBTrackerHitsRelations",
-                                  InputCollection3 = "OBTrackerHitsRelations",
-                                  InputCollection4 = "VETrackerHitsRelations",
-                                  InputCollection5 = "IETrackerHitsRelations",
-                                  InputCollection6 = "OETrackerHitsRelations",
-                                  OutputCollection = "MergedTrackerHitsRelations")
+                            InputCollection1 = "VXDBarrelHitsRelations",
+                            InputCollection2 = "ITBarrelHitsRelations",
+                            InputCollection3 = "OTBarrelHitsRelations",
+                            InputCollection4 = "VXDEndcapHitsRelations",
+                            InputCollection5 = "ITEndcapHitsRelations",
+                            InputCollection6 = "OTEndcapHitsRelations",
+                            OutputCollection = "MergedTrackerHitsRelations")
 MyMergeAssociations.OutputLevel = WARNING
 
 # Perform Reconstruction
@@ -103,9 +113,15 @@ MyTrackPerf.OutputLevel = WARNING
 #                       }
 
 # Build Algorithm
-algList = [podioinput, 
+algList = [podioinput, InitDD4hep,
         MyMergeTracks, MyMergeAssociations, MyCKFTracking, 
-        MyTrackDeduper, MyTrackFilter, MyTrackTruth, MyTrackPerf]
+      #  MyTrackDeduper, MyTrackFilter, MyTrackTruth, MyTrackPerf
+]
+
+THistSvc().Output = ["histos DATAFILE='histograms.root TYP='ROOT' OPT='RECREATE'"]
+THistSvc().PrintAll = True
+THistSvc().AutoSave = True
+THistSvc().AutoFlush = True
 
 # Run it
 from Configurables import ApplicationMgr

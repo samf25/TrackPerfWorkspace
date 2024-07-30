@@ -2,10 +2,10 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSMergeRelationCo
  /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/ACTSMergeRelationCollections.cxx \
  /usr/include/stdc-predef.h \
  /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/./ACTSTracking/ACTSMergeRelationCollections.hxx \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackParticleAssociationCollection.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackParticleAssociationData.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackParticleAssociation.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackParticleAssociationObj.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackerHitPlaneAssociationCollection.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackerHitPlaneAssociationData.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackerHitPlaneAssociation.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackerHitPlaneAssociationObj.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/podio/0.99-q5wdpn/include/podio/ObjectID.h \
  /usr/include/c++/11/cstdint \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \
@@ -193,15 +193,13 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSMergeRelationCo
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/nlohmann-json/3.11.2-jexsvg/include/nlohmann/detail/abi_macros.hpp \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MutableMCRecoTrackParticleAssociation.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackParticleAssociationCollectionData.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCParticle.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCParticleObj.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCParticleData.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/Vector2i.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MutableMCRecoTrackerHitPlaneAssociation.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCRecoTrackerHitPlaneAssociationCollectionData.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/SimTrackerHit.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/SimTrackerHitObj.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/SimTrackerHitData.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/Vector3d.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/Vector3f.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/podio/0.99-q5wdpn/include/podio/RelationRange.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
@@ -221,15 +219,12 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSMergeRelationCo
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/Track.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackObj.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackData.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/Quantity.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackState.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackerHit.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackerHitObj.h \
- /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackerHitData.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackerHitPlane.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackerHitPlaneObj.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/TrackerHitPlaneData.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/Vector2f.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/ObjectID.h \
+ /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/podio/0.99-q5wdpn/include/podio/RelationRange.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/podio/0.99-q5wdpn/include/podio/CollectionBuffers.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/podio/0.99-q5wdpn/include/podio/SchemaEvolution.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \

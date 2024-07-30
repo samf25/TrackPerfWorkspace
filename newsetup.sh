@@ -1,3 +1,9 @@
+# mkdir build
+# cd build
+# cmake .. -DCMAKE_INSTALL_PREFIX=../install
+# cmake --build . -j $(nproc) -t install 
+# cd ../install
+
 export PATH=$PWD/install/bin:$PATH
 export LD_LIBRARY_PATH=$PWD/install/lib:$PWD/install/lib64:$LD_LIBRARY_PATH
 export ROOT_INCLUDE_PATH=$PWD/install/include:$ROOT_INCLUDE_PATH

@@ -12,6 +12,10 @@
 /isilon/export/home/sferrar2/TrackPerfWorkspace/install/lib/TrackPerfWorkspace.confdb
 /isilon/export/home/sferrar2/TrackPerfWorkspace/install/lib/TrackPerfWorkspace.confdb2
 /isilon/export/home/sferrar2/TrackPerfWorkspace/install/lib/libACTSTrackingPlugins.so
+/isilon/export/home/sferrar2/TrackPerfWorkspace/install/lib/libInitDD4hepPlugins.so
+/isilon/export/home/sferrar2/TrackPerfWorkspace/install/python/GaudiDD4hep/InitDD4hepPluginsConf.py
+/isilon/export/home/sferrar2/TrackPerfWorkspace/install/python/GaudiDD4hep/__init__.py
+/isilon/export/home/sferrar2/TrackPerfWorkspace/install/lib/libInitDD4hepPlugins.so
 /isilon/export/home/sferrar2/TrackPerfWorkspace/install/lib/libTrackPerfPlugins.so
 /isilon/export/home/sferrar2/TrackPerfWorkspace/install/python/TrackPerf/TrackPerfPluginsConf.py
 /isilon/export/home/sferrar2/TrackPerfWorkspace/install/python/TrackPerf/__init__.py

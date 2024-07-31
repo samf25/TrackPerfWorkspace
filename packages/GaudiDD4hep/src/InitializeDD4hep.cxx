@@ -8,7 +8,7 @@ DECLARE_COMPONENT(InitializeDD4hep)
 InitializeDD4hep::InitializeDD4hep(const std::string& name, ISvcLocator* svcLoc) : Gaudi::Algorithm(name, svcLoc) {}
 
 StatusCode InitializeDD4hep::initialize() {
-	dd4hep::setPrintLevel(dd4hep::INFO);
+	dd4hep::setPrintLevel(dd4hep::WARNING);
 
 	MsgStream log(msgSvc(), name());
         log << MSG::INFO << " -------------------------------------" << std::endl

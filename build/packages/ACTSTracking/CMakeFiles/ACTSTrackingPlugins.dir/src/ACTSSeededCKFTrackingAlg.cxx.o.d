@@ -1502,6 +1502,8 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTracki
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/SimTrackerHit.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/SimTrackerHitObj.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/SimTrackerHitData.h \
+ /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/./ACTSTracking/CellIDDecoder.hxx \
+ /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/./ACTSTracking/BitField64.hxx \
  /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/./ACTSTracking/GeometryIdSelector.hxx \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCParticle.h \
  /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/edm4hep/0.10.5-mklr6c/include/edm4hep/MCParticleObj.h \

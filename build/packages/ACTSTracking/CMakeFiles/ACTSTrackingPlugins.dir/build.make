@@ -139,10 +139,24 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTracki
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTrackingAlg.cxx.s"
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /usr/lib64/ccache/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/ACTSSeededCKFTrackingAlg.cxx -o CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTrackingAlg.cxx.s
 
+packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/flags.make
+packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o: /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/BitField64.cxx
+packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o"
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /usr/lib64/ccache/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o -MF CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o.d -o CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o -c /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/BitField64.cxx
+
+packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.i"
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /usr/lib64/ccache/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/BitField64.cxx > CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.i
+
+packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.s"
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /usr/lib64/ccache/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/BitField64.cxx -o CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.s
+
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/flags.make
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o: /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/GeometryIdMappingTool.cxx
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o"
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /usr/lib64/ccache/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o -MF CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o.d -o CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o -c /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/GeometryIdMappingTool.cxx
 
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.i: cmake_force
@@ -156,7 +170,7 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTo
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/flags.make
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o: /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/GeometryIdSelector.cxx
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o"
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /usr/lib64/ccache/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o -MF CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o.d -o CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o -c /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/GeometryIdSelector.cxx
 
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.i: cmake_force
@@ -170,7 +184,7 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/flags.make
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o: /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/Helpers.cxx
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o"
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /usr/lib64/ccache/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o -MF CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o.d -o CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o -c /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/Helpers.cxx
 
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.i: cmake_force
@@ -184,7 +198,7 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.s: cmak
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/flags.make
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.o: /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/TrackTruthAlg.cxx
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.o: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.o"
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /usr/lib64/ccache/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.o -MF CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.o.d -o CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.o -c /isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/TrackTruthAlg.cxx
 
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/TrackTruthAlg.cxx.i: cmake_force
@@ -202,6 +216,7 @@ ACTSTrackingPlugins_OBJECTS = \
 "CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSMergeHitCollections.cxx.o" \
 "CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSMergeRelationCollections.cxx.o" \
 "CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTrackingAlg.cxx.o" \
+"CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o" \
 "CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o" \
 "CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o" \
 "CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o" \
@@ -215,6 +230,7 @@ packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFile
 packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSMergeHitCollections.cxx.o
 packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSMergeRelationCollections.cxx.o
 packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTrackingAlg.cxx.o
+packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o
 packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o
 packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o
 packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/Helpers.cxx.o
@@ -283,7 +299,7 @@ packages/ACTSTracking/libACTSTrackingPlugins.so: /opt/spack/opt/spack/x86_64-alm
 packages/ACTSTracking/libACTSTrackingPlugins.so: /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/root/6.30.06-txowyc/lib/root/libCore.so.6.30.06
 packages/ACTSTracking/libACTSTrackingPlugins.so: /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/acts/32.1.0-bptf4c/lib64/libActsCore.so
 packages/ACTSTracking/libACTSTrackingPlugins.so: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX shared module libACTSTrackingPlugins.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared module libACTSTrackingPlugins.so"
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ACTSTrackingPlugins.dir/link.txt --verbose=$(VERBOSE)
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/cmake/3.27.9-gcyie2/bin/cmake -E create_symlink /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking/libACTSTrackingPlugins.so /isilon/export/home/sferrar2/TrackPerfWorkspace/build/.plugins/libACTSTrackingPlugins.so
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && ../../run /opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/gaudi/38.1-f5ejkb/bin/listcomponents --output ACTSTrackingPlugins.components libACTSTrackingPlugins.so

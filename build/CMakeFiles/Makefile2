@@ -64,17 +64,20 @@ CMAKE_BINARY_DIR = /isilon/export/home/sferrar2/TrackPerfWorkspace/build
 
 # The main recursive "all" target.
 all: packages/ACTSTracking/all
+all: packages/GaudiDD4hep/all
 all: packages/TrackPerf/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: packages/ACTSTracking/preinstall
+preinstall: packages/GaudiDD4hep/preinstall
 preinstall: packages/TrackPerf/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/target_runtime_paths.dir/clean
 clean: packages/ACTSTracking/clean
+clean: packages/GaudiDD4hep/clean
 clean: packages/TrackPerf/clean
 .PHONY : clean
 
@@ -135,6 +138,21 @@ packages/ACTSTracking/example/clean:
 .PHONY : packages/ACTSTracking/example/clean
 
 #=============================================================================
+# Directory level rules for directory packages/GaudiDD4hep
+
+# Recursive "all" directory target.
+packages/GaudiDD4hep/all: packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/all
+.PHONY : packages/GaudiDD4hep/all
+
+# Recursive "preinstall" directory target.
+packages/GaudiDD4hep/preinstall:
+.PHONY : packages/GaudiDD4hep/preinstall
+
+# Recursive "clean" directory target.
+packages/GaudiDD4hep/clean: packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/clean
+.PHONY : packages/GaudiDD4hep/clean
+
+#=============================================================================
 # Directory level rules for directory packages/TrackPerf
 
 # Recursive "all" directory target.
@@ -182,12 +200,12 @@ CMakeFiles/target_runtime_paths.dir/clean:
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/all:
 	$(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/depend
 	$(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target ACTSTrackingPlugins"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target ACTSTrackingPlugins"
 .PHONY : packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/all
 
 # Build rule for subdir invocation for target.
 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 0
 .PHONY : packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/rule
@@ -205,16 +223,17 @@ packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/clean:
 # Target rules for target packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir
 
 # All Build rule for target.
-packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/all: packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/all
 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/all: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/all
+packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/all: packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/all
+packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/all: packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/all
 	$(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/build.make packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/depend
 	$(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/build.make packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=17 "Built target TrackPerfWorkspace_MergeComponents"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=20 "Built target TrackPerfWorkspace_MergeComponents"
 .PHONY : packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/all
 
 # Build rule for subdir invocation for target.
 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 0
 .PHONY : packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/rule
@@ -232,16 +251,17 @@ packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/clean:
 # Target rules for target packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir
 
 # All Build rule for target.
-packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/all: packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/all
 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/all: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/all
+packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/all: packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/all
+packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/all: packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/all
 	$(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/build.make packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/depend
 	$(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/build.make packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=19 "Built target TrackPerfWorkspace_MergeConfdb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=22 "Built target TrackPerfWorkspace_MergeConfdb"
 .PHONY : packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/all
 
 # Build rule for subdir invocation for target.
 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 0
 .PHONY : packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/rule
@@ -259,16 +279,17 @@ packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/clean:
 # Target rules for target packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir
 
 # All Build rule for target.
-packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/all: packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/all
 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/all: packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/all
+packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/all: packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/all
+packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/all: packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/all
 	$(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/build.make packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/depend
 	$(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/build.make packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=18 "Built target TrackPerfWorkspace_MergeConfDB2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=21 "Built target TrackPerfWorkspace_MergeConfDB2"
 .PHONY : packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/all
 
 # Build rule for subdir invocation for target.
 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 0
 .PHONY : packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/rule
@@ -283,13 +304,39 @@ packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/clean:
 .PHONY : packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/clean
 
 #=============================================================================
+# Target rules for target packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir
+
+# All Build rule for target.
+packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/all:
+	$(MAKE) $(MAKESILENT) -f packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/build.make packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/depend
+	$(MAKE) $(MAKESILENT) -f packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/build.make packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=12,13 "Built target InitDD4hepPlugins"
+.PHONY : packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/all
+
+# Build rule for subdir invocation for target.
+packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles 0
+.PHONY : packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/rule
+
+# Convenience name for target.
+InitDD4hepPlugins: packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/rule
+.PHONY : InitDD4hepPlugins
+
+# clean rule for target.
+packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/clean:
+	$(MAKE) $(MAKESILENT) -f packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/build.make packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/clean
+.PHONY : packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/clean
+
+#=============================================================================
 # Target rules for target packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir
 
 # All Build rule for target.
 packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/all:
 	$(MAKE) $(MAKESILENT) -f packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/build.make packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/depend
 	$(MAKE) $(MAKESILENT) -f packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/build.make packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=11,12,13,14,15,16 "Built target TrackPerfPlugins"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=14,15,16,17,18,19 "Built target TrackPerfPlugins"
 .PHONY : packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/all
 
 # Build rule for subdir invocation for target.

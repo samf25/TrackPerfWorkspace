@@ -27,6 +27,13 @@
 /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking/example/CMakeFiles/install.dir
 /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking/example/CMakeFiles/install/local.dir
 /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking/example/CMakeFiles/install/strip.dir
+/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir
+/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/CMakeFiles/edit_cache.dir
+/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/CMakeFiles/rebuild_cache.dir
+/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/CMakeFiles/list_install_components.dir
+/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/CMakeFiles/install.dir
+/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/CMakeFiles/install/local.dir
+/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/CMakeFiles/install/strip.dir
 /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir
 /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/TrackPerf/CMakeFiles/edit_cache.dir
 /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/TrackPerf/CMakeFiles/rebuild_cache.dir

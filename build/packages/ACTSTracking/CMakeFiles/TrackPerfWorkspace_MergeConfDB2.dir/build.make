@@ -69,9 +69,10 @@ include packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/pro
 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2: TrackPerfWorkspace.confdb2
 
 TrackPerfWorkspace.confdb2: packages/ACTSTracking/genConfDir/ACTSTracking/ACTSTrackingPlugins.confdb2_part
+TrackPerfWorkspace.confdb2: packages/GaudiDD4hep/genConfDir/GaudiDD4hep/InitDD4hepPlugins.confdb2_part
 TrackPerfWorkspace.confdb2: packages/TrackPerf/genConfDir/TrackPerf/TrackPerfPlugins.confdb2_part
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Merging .confdb2 files for TrackPerfWorkspace"
-	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && ../../run merge_confdb2_parts /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking/genConfDir/ACTSTracking/ACTSTrackingPlugins.confdb2_part /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/TrackPerf/genConfDir/TrackPerf/TrackPerfPlugins.confdb2_part --output /isilon/export/home/sferrar2/TrackPerfWorkspace/build/TrackPerfWorkspace.confdb2
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && ../../run merge_confdb2_parts /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking/genConfDir/ACTSTracking/ACTSTrackingPlugins.confdb2_part /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/genConfDir/GaudiDD4hep/InitDD4hepPlugins.confdb2_part /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/TrackPerf/genConfDir/TrackPerf/TrackPerfPlugins.confdb2_part --output /isilon/export/home/sferrar2/TrackPerfWorkspace/build/TrackPerfWorkspace.confdb2
 
 TrackPerfWorkspace_MergeConfDB2: TrackPerfWorkspace.confdb2
 TrackPerfWorkspace_MergeConfDB2: packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2

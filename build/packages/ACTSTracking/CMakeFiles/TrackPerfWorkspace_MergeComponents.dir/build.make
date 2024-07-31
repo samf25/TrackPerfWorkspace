@@ -69,9 +69,10 @@ include packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/
 packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents: TrackPerfWorkspace.components
 
 TrackPerfWorkspace.components: packages/ACTSTracking/ACTSTrackingPlugins.components
+TrackPerfWorkspace.components: packages/GaudiDD4hep/InitDD4hepPlugins.components
 TrackPerfWorkspace.components: packages/TrackPerf/TrackPerfPlugins.components
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/isilon/export/home/sferrar2/TrackPerfWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Merging .components files for TrackPerfWorkspace"
-	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && cat /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking/ACTSTrackingPlugins.components /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/TrackPerf/TrackPerfPlugins.components > /isilon/export/home/sferrar2/TrackPerfWorkspace/build/TrackPerfWorkspace.components
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking && cat /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/ACTSTracking/ACTSTrackingPlugins.components /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/InitDD4hepPlugins.components /isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/TrackPerf/TrackPerfPlugins.components > /isilon/export/home/sferrar2/TrackPerfWorkspace/build/TrackPerfWorkspace.components
 
 TrackPerfWorkspace_MergeComponents: TrackPerfWorkspace.components
 TrackPerfWorkspace_MergeComponents: packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents

@@ -15,6 +15,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/data/CMakeLists.txt"
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/example/CMakeLists.txt"
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/ACTSTracking/src/config.h.in"
+  "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/GaudiDD4hep/CMakeLists.txt"
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/TrackPerf/CMakeLists.txt"
   "/isilon/export/home/sferrar2/TrackPerfWorkspace/packages/TrackPerf/src/config.h.in"
   "/opt/spack/opt/spack/x86_64-almalinux9-gcc11.4.1-opt/acts/32.1.0-bptf4c/lib64/cmake/Acts/ActsConfig.cmake"
@@ -274,6 +275,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "packages/ACTSTracking/CMakeFiles/CMakeDirectoryInformation.cmake"
   "packages/ACTSTracking/data/CMakeFiles/CMakeDirectoryInformation.cmake"
   "packages/ACTSTracking/example/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "packages/GaudiDD4hep/CMakeFiles/CMakeDirectoryInformation.cmake"
   "packages/TrackPerf/config.h"
   "packages/TrackPerf/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -285,5 +287,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeComponents.dir/DependInfo.cmake"
   "packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfdb.dir/DependInfo.cmake"
   "packages/ACTSTracking/CMakeFiles/TrackPerfWorkspace_MergeConfDB2.dir/DependInfo.cmake"
+  "packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/DependInfo.cmake"
   "packages/TrackPerf/CMakeFiles/TrackPerfPlugins.dir/DependInfo.cmake"
   )

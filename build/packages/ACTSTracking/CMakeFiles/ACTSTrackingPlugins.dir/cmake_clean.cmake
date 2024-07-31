@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSMergeRelationCollections.cxx.o.d"
   "CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTrackingAlg.cxx.o"
   "CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTrackingAlg.cxx.o.d"
+  "CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o"
+  "CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o.d"
   "CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o"
   "CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdMappingTool.cxx.o.d"
   "CMakeFiles/ACTSTrackingPlugins.dir/src/GeometryIdSelector.cxx.o"

@@ -53,6 +53,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/GaudiDD4hep/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/isilon/export/home/sferrar2/TrackPerfWorkspace/build/packages/TrackPerf/cmake_install.cmake")
 endif()
 

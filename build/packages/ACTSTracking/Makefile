@@ -337,6 +337,30 @@ src/ACTSSeededCKFTrackingAlg.cxx.s:
 	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/ACTSSeededCKFTrackingAlg.cxx.s
 .PHONY : src/ACTSSeededCKFTrackingAlg.cxx.s
 
+src/BitField64.o: src/BitField64.cxx.o
+.PHONY : src/BitField64.o
+
+# target to build an object file
+src/BitField64.cxx.o:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.o
+.PHONY : src/BitField64.cxx.o
+
+src/BitField64.i: src/BitField64.cxx.i
+.PHONY : src/BitField64.i
+
+# target to preprocess a source file
+src/BitField64.cxx.i:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.i
+.PHONY : src/BitField64.cxx.i
+
+src/BitField64.s: src/BitField64.cxx.s
+.PHONY : src/BitField64.s
+
+# target to generate assembly for a file
+src/BitField64.cxx.s:
+	cd /isilon/export/home/sferrar2/TrackPerfWorkspace/build && $(MAKE) $(MAKESILENT) -f packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/build.make packages/ACTSTracking/CMakeFiles/ACTSTrackingPlugins.dir/src/BitField64.cxx.s
+.PHONY : src/BitField64.cxx.s
+
 src/GeometryIdMappingTool.o: src/GeometryIdMappingTool.cxx.o
 .PHONY : src/GeometryIdMappingTool.o
 
@@ -464,6 +488,9 @@ help:
 	@echo "... src/ACTSSeededCKFTrackingAlg.o"
 	@echo "... src/ACTSSeededCKFTrackingAlg.i"
 	@echo "... src/ACTSSeededCKFTrackingAlg.s"
+	@echo "... src/BitField64.o"
+	@echo "... src/BitField64.i"
+	@echo "... src/BitField64.s"
 	@echo "... src/GeometryIdMappingTool.o"
 	@echo "... src/GeometryIdMappingTool.i"
 	@echo "... src/GeometryIdMappingTool.s"

@@ -227,6 +227,19 @@ TrackPerfWorkspace_MergeConfDB2/fast:
 .PHONY : TrackPerfWorkspace_MergeConfDB2/fast
 
 #=============================================================================
+# Target rules for targets named InitDD4hepPlugins
+
+# Build rule for target.
+InitDD4hepPlugins: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 InitDD4hepPlugins
+.PHONY : InitDD4hepPlugins
+
+# fast build rule for target.
+InitDD4hepPlugins/fast:
+	$(MAKE) $(MAKESILENT) -f packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/build.make packages/GaudiDD4hep/CMakeFiles/InitDD4hepPlugins.dir/build
+.PHONY : InitDD4hepPlugins/fast
+
+#=============================================================================
 # Target rules for targets named TrackPerfPlugins
 
 # Build rule for target.
@@ -256,6 +269,7 @@ help:
 	@echo "... TrackPerfWorkspace_MergeConfdb"
 	@echo "... target_runtime_paths"
 	@echo "... ACTSTrackingPlugins"
+	@echo "... InitDD4hepPlugins"
 	@echo "... TrackPerfPlugins"
 .PHONY : help
 

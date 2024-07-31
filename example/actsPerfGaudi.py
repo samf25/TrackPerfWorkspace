@@ -1,5 +1,5 @@
 from Gaudi.Configuration import *
-from Configurables import EventDataSvc, ApplicationMgr, PodioInput, PodioOutput, k4DataSvc#, GeoSvc
+from Configurables import EventDataSvc, ApplicationMgr, PodioInput, PodioOutput, k4DataSvc, InitializeDD4hep#, GeoSvc
 from Configurables import ACTSMergeHitCollections, ACTSMergeRelationCollections, ACTSSeededCKFTrackingAlg
 from Configurables import ACTSDuplicateRemoval, FilterTracksAlg, TrackTruthAlg, TrackPerfHistAlg
 from Configurables import MarlinProcessorWrapper
@@ -17,16 +17,14 @@ podioinput = PodioInput("PodioReader",
 	"MCParticle"], OutputLevel = DEBUG)
 
 # Feed in Dectector Geometry
-detectors_to_use = ['/isilon/export/home/sferrar2/Container/detector-simulation/geometries/MuColl_v1.0.1/MuColl_v1.xml',]
+detectors_to_use = '/isilon/export/home/sferrar2/Container/detector-simulation/geometries/MuColl_v1.0.1/MuColl_v1.xml'
 #geoservice = GeoSvc("GeoSvc", detectors = detectors_to_use, OutputLevel = INFO)
 
-InitDD4hep = MarlinProcessorWrapper("InitDD4hep")
-InitDD4hep.OutputLevel = WARNING
-InitDD4hep.ProcessorType = "InitializeDD4hep"
-InitDD4hep.Parameters = {
-                         "DD4hepXMLFile": detectors_to_use,
-                         "EncodingStringParameterName": ["GlobalTrackerReadoutID"]
-                         }
+# Initialize DD4hep
+InitDD4hep = InitializeDD4hep("DD4hep Initializer",
+                              DD4hepXMLFile = detectors_to_use,
+                              EncodingString = "GlobalTrackerReadoutID")
+InitDD4hep.OutputLevel = INFO
 
 # Merge Track Collections into One Collection
 MyMergeTracks = ACTSMergeHitCollections("MergeTrackHits",

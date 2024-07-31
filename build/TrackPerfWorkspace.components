@@ -1,8 +1,0 @@
-v2::libACTSTrackingPlugins.so:ACTSDuplicateRemoval
-v2::libACTSTrackingPlugins.so:ACTSMergeHitCollections
-v2::libACTSTrackingPlugins.so:ACTSMergeRelationCollections
-v2::libACTSTrackingPlugins.so:ACTSSeededCKFTrackingAlg
-v2::libACTSTrackingPlugins.so:TrackTruthAlg
-v2::libInitDD4hepPlugins.so:InitializeDD4hep
-v2::libTrackPerfPlugins.so:FilterTracksAlg
-v2::libTrackPerfPlugins.so:TrackPerfHistAlg

@@ -6,7 +6,7 @@ from Configurables import MarlinProcessorWrapper
 
 
 # Read in Simulation Output Data
-podioevent = k4DataSvc("EventDataSvc", input = "output_digi.edm4hep.root")
+podioevent = k4DataSvc("EventDataSvc", input = "../../data/output_digi.edm4hep.root")
 podioinput = PodioInput("PodioReader", 
 	collections= [
 	"VXDBarrelHits", "ITBarrelHits", "OTBarrelHits", 
@@ -14,7 +14,7 @@ podioinput = PodioInput("PodioReader",
 	"VXDBarrelHitsRelations", "ITBarrelHitsRelations", 
 	"OTBarrelHitsRelations", "VXDEndcapHitsRelations", 
 	"ITEndcapHitsRelations", "OTEndcapHitsRelations", 
-	"MCParticle"], OutputLevel = DEBUG)
+	"MCParticle"], OutputLevel = WARNING)
 
 # Feed in Dectector Geometry
 detectors_to_use = '/isilon/export/home/sferrar2/Container/detector-simulation/geometries/MuColl_v1.0.1/MuColl_v1.xml'
@@ -24,7 +24,7 @@ detectors_to_use = '/isilon/export/home/sferrar2/Container/detector-simulation/g
 InitDD4hep = InitializeDD4hep("DD4hep Initializer",
                               DD4hepXMLFile = detectors_to_use,
                               EncodingString = "GlobalTrackerReadoutID")
-InitDD4hep.OutputLevel = INFO
+InitDD4hep.OutputLevel = WARNING
 
 # Merge Track Collections into One Collection
 MyMergeTracks = ACTSMergeHitCollections("MergeTrackHits",
@@ -87,7 +87,6 @@ MyTrackFilter.OutputLevel = WARNING
 
 # Association Tracks with MCParticles
 MyTrackTruth = TrackTruthAlg("AssociationCreator",
-                            InputMCParticleCollectionName = "MCParticle",
                             OutputParticle2TrackRelationName = "MCParticle_SiTracks",
                             InputTrackCollectionName = "SiTracks",
                             InputTrackerHit2SimTrackerHitRelationName = "MergedTrackerHitsRelations")
@@ -111,9 +110,11 @@ MyTrackPerf.OutputLevel = WARNING
 #                       }
 
 # Build Algorithm
-algList = [podioinput, InitDD4hep,
-        MyMergeTracks, MyMergeAssociations, MyCKFTracking, 
-      #  MyTrackDeduper, MyTrackFilter, MyTrackTruth, MyTrackPerf
+algList = [podioinput, InitDD4hep, 
+           MyMergeTracks, MyMergeAssociations, 
+           MyCKFTracking, 
+           MyTrackDeduper, MyTrackFilter, 
+           MyTrackTruth, MyTrackPerf
 ]
 
 THistSvc().Output = ["histos DATAFILE='histograms.root TYP='ROOT' OPT='RECREATE'"]

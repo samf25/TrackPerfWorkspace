@@ -22,7 +22,7 @@ StatusCode InitializeDD4hep::initialize() {
 
 	log << MSG::INFO << "Encoding String should be set to:" << std::endl
 			 << theDetector.constantAsString( m_encodingString ) << std::endl
-			 << "Which was specified in the lccd parameter: " << m_encodingString 
+			 << "Which was specified in the lccd parameter: " << m_encodingString << std::endl 
 			 << "--------------------------------------" << endmsg;
 	
 	return StatusCode::SUCCESS;

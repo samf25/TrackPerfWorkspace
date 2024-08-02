@@ -129,7 +129,7 @@ THistSvc().AutoFlush = True
 from Configurables import ApplicationMgr
 ApplicationMgr( TopAlg = algList,
                 EvtSel = 'NONE',
-                EvtMax   = 1000,
+                EvtMax   = 10000,
                 ExtSvc = [podioevent],#, geoservice],
                 OutputLevel=WARNING
               )

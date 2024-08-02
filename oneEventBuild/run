@@ -1,4 +1,0 @@
-#!/bin/sh
-# Auto-generated script to set the environment before the execution of a command
-. /isilon/export/home/sferrar2/TrackPerfWorkspace/oneEventBuild/trackperfworkspaceenv.sh
-exec "$@"

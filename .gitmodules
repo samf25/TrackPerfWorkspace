@@ -1,0 +1,6 @@
+[submodule "packages/TrackPerf"]
+	path = packages/TrackPerf
+	url = https://github.com/MuonColliderSoft/TrackPerf.git
+[submodule "packages/ACTSTracking"]
+	path = packages/ACTSTracking
+	url = https://github.com/MuonColliderSoft/ACTSTracking.git

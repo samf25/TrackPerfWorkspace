@@ -1,5 +1,6 @@
 from Gaudi.Configuration import *
-from Configurables import EventDataSvc, ApplicationMgr, PodioInput, PodioOutput, k4DataSvc, InitializeDD4hep#, GeoSvc
+from Configurables import EventDataSvc, ApplicationMgr, k4DataSvc, EventSelector, EventCounter
+from Configurables import PodioInput, PodioOutput, InitializeDD4hep
 from Configurables import ACTSMergeHitCollections, ACTSMergeRelationCollections, ACTSSeededCKFTrackingAlg
 from Configurables import ACTSDuplicateRemoval, FilterTracksAlg, TrackTruthAlg, TrackPerfHistAlg
 from Configurables import MarlinProcessorWrapper
@@ -7,6 +8,8 @@ from Configurables import MarlinProcessorWrapper
 
 # Read in Simulation Output Data
 podioevent = k4DataSvc("EventDataSvc", input = "../../data/output_digi.edm4hep.root")
+evtCount = EventCounter("Event Counter", Frequency = 100, OutputLevel=DEBUG)
+
 podioinput = PodioInput("PodioReader", 
 	collections= [
 	"VXDBarrelHits", "ITBarrelHits", "OTBarrelHits", 
@@ -110,14 +113,14 @@ MyTrackPerf.OutputLevel = WARNING
 #                       }
 
 # Build Algorithm
-algList = [podioinput, InitDD4hep, 
+algList = [evtCount, podioinput, InitDD4hep, 
            MyMergeTracks, MyMergeAssociations, 
            MyCKFTracking, 
            MyTrackDeduper, MyTrackFilter, 
            MyTrackTruth, MyTrackPerf
 ]
 
-THistSvc().Output = ["histos DATAFILE='histograms.root TYP='ROOT' OPT='RECREATE'"]
+THistSvc().Output = ["histos DATAFILE='histograms.root' TYP='ROOT' OPT='RECREATE'"]
 THistSvc().PrintAll = True
 THistSvc().AutoSave = True
 THistSvc().AutoFlush = True
@@ -126,7 +129,7 @@ THistSvc().AutoFlush = True
 from Configurables import ApplicationMgr
 ApplicationMgr( TopAlg = algList,
                 EvtSel = 'NONE',
-                EvtMax   = 10,
+                EvtMax   = 1000,
                 ExtSvc = [podioevent],#, geoservice],
                 OutputLevel=WARNING
               )

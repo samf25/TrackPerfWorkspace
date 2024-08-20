@@ -1,4 +1,4 @@
-#Fri Aug  2 14:05:36 2024"""Automatically generated. DO NOT EDIT please"""
+#Tue Aug 20 11:29:53 2024"""Automatically generated. DO NOT EDIT please"""
 import sys
 if sys.version_info >= (3,):
     # Python 2 compatibility
@@ -59,7 +59,7 @@ class TrackPerfHistAlg( ConfigurableAlgorithm ) :
     'InputMCParticleCollectionName' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<>,std::tuple<DataWrapper<edm4hep::MCParticleCollection>,edm4hep::TrackCollection,edm4hep::MCRecoTrackParticleAssociationCollection>,Gaudi::Functional::Traits::use_<> >] """,
     'MatchProb' : """ Minimum matching probability to be considered a good track-MC match. [TrackPerfHistAlg] """,
   }
-  __declaration_location__ = 'TrackPerfHistAlg.cxx:11'
+  __declaration_location__ = 'TrackPerfHistAlg.cxx:16'
   def __init__(self, name = Configurable.DefaultName, **kwargs):
       super(TrackPerfHistAlg, self).__init__(name)
       for n,v in kwargs.items():

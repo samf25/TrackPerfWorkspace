@@ -1,4 +1,4 @@
-#Fri Aug  2 14:56:27 2024"""Automatically generated. DO NOT EDIT please"""
+#Tue Aug 20 11:30:50 2024"""Automatically generated. DO NOT EDIT please"""
 import sys
 if sys.version_info >= (3,):
     # Python 2 compatibility
@@ -55,7 +55,7 @@ class ACTSDuplicateRemoval( ConfigurableAlgorithm ) :
     'InputTrackCollectionName' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<edm4hep::TrackCollection>,std::tuple<edm4hep::TrackCollection>,Gaudi::Functional::Traits::use_<> >] """,
     'OutputTrackCollectionName' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<edm4hep::TrackCollection>,std::tuple<edm4hep::TrackCollection>,Gaudi::Functional::Traits::use_<> >] """,
   }
-  __declaration_location__ = 'ACTSDuplicateRemoval.cxx:52'
+  __declaration_location__ = 'ACTSDuplicateRemoval.cxx:65'
   def __init__(self, name = Configurable.DefaultName, **kwargs):
       super(ACTSDuplicateRemoval, self).__init__(name)
       for n,v in kwargs.items():
@@ -125,7 +125,7 @@ class ACTSMergeHitCollections( ConfigurableAlgorithm ) :
     'InputCollection1' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<edm4hep::TrackerHitPlaneCollection>,std::tuple<DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection> >,Gaudi::Functional::Traits::use_<> >] """,
     'OutputCollection' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<edm4hep::TrackerHitPlaneCollection>,std::tuple<DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection>,DataWrapper<edm4hep::TrackerHitPlaneCollection> >,Gaudi::Functional::Traits::use_<> >] """,
   }
-  __declaration_location__ = 'ACTSMergeHitCollections.cxx:6'
+  __declaration_location__ = 'ACTSMergeHitCollections.cxx:7'
   def __init__(self, name = Configurable.DefaultName, **kwargs):
       super(ACTSMergeHitCollections, self).__init__(name)
       for n,v in kwargs.items():
@@ -195,7 +195,7 @@ class ACTSMergeRelationCollections( ConfigurableAlgorithm ) :
     'InputCollection1' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,std::tuple<DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection> >,Gaudi::Functional::Traits::use_<> >] """,
     'OutputCollection' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,std::tuple<DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,DataWrapper<edm4hep::MCRecoTrackerHitPlaneAssociationCollection> >,Gaudi::Functional::Traits::use_<> >] """,
   }
-  __declaration_location__ = 'ACTSMergeRelationCollections.cxx:6'
+  __declaration_location__ = 'ACTSMergeRelationCollections.cxx:7'
   def __init__(self, name = Configurable.DefaultName, **kwargs):
       super(ACTSMergeRelationCollections, self).__init__(name)
       for n,v in kwargs.items():
@@ -317,7 +317,7 @@ class ACTSSeededCKFTrackingAlg( ConfigurableAlgorithm ) :
     'CKF_NumMeasurementsCutOff' : """ Maximum number of associated measurements on a single surface. [ACTSSeededCKFTrackingAlg] """,
     'SeedingLayers' : """ Layers to use for seeding in vector. [ACTSSeededCKFTrackingAlg] """,
   }
-  __declaration_location__ = 'ACTSSeededCKFTrackingAlg.cxx:37'
+  __declaration_location__ = 'ACTSSeededCKFTrackingAlg.cxx:41'
   def __init__(self, name = Configurable.DefaultName, **kwargs):
       super(ACTSSeededCKFTrackingAlg, self).__init__(name)
       for n,v in kwargs.items():
@@ -387,7 +387,7 @@ class FilterTracksAlg( ConfigurableAlgorithm ) :
     'NHitsOuter' : """ Minimum number of hits on outer tracker [FilterTracksAlg] """,
     'MinPt' : """ Minimum transverse momentum [FilterTracksAlg] """,
   }
-  __declaration_location__ = 'FilterTracksAlg.cxx:12'
+  __declaration_location__ = 'FilterTracksAlg.cxx:16'
   def __init__(self, name = Configurable.DefaultName, **kwargs):
       super(FilterTracksAlg, self).__init__(name)
       for n,v in kwargs.items():
@@ -449,7 +449,7 @@ class TrackTruthAlg( ConfigurableAlgorithm ) :
     'InputTrackCollectionName' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<edm4hep::MCRecoTrackParticleAssociationCollection>,std::tuple<edm4hep::TrackCollection,edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,Gaudi::Functional::Traits::use_<> >] """,
     'OutputParticle2TrackRelationName' : """  [Gaudi::Functional::details::DataHandleMixin<std::tuple<edm4hep::MCRecoTrackParticleAssociationCollection>,std::tuple<edm4hep::TrackCollection,edm4hep::MCRecoTrackerHitPlaneAssociationCollection>,Gaudi::Functional::Traits::use_<> >] """,
   }
-  __declaration_location__ = 'TrackTruthAlg.cxx:14'
+  __declaration_location__ = 'TrackTruthAlg.cxx:15'
   def __init__(self, name = Configurable.DefaultName, **kwargs):
       super(TrackTruthAlg, self).__init__(name)
       for n,v in kwargs.items():

@@ -1,29 +1,6 @@
-######################################################
-# cmake file for building Gaudi Packages
-# @author Samuel Ferraro
 CMAKE_MINIMUM_REQUIRED(VERSION 3.15 FATAL_ERROR)
-######################################################
 
-PROJECT(TrackPerfWorkspace VERSION 2.0.0)
-
-### DEPENDENCIES #####################################
-FIND_PACKAGE( Gaudi REQUIRED )
-FIND_PACKAGE( EDM4HEP REQUIRED )
-FIND_PACKAGE( DD4hep REQUIRED )
-FIND_PACKAGE( ROOT REQUIRED )
-FIND_PACKAGE( Acts REQUIRED COMPONENTS Core PluginJson PluginTGeo )
-FIND_PACKAGE( k4FWCore REQUIRED )
-INCLUDE(GNUInstallDirs)
-
-
-set(CMAKE_CXX_STANDARD 17 CACHE STRING "")
-
-### DOCUMENTATION ###################################
-OPTION( INSTALL_DOC "Set to OFF to skip build/install Documentation" OFF )
-
-IF( INSTALL_DOC AND EXISTS "${PROJECT_SOURCE_DIR}/doc/CMakeLists.txt" )
-    ADD_SUBDIRECTORY( ./doc )
-ENDIF()
+PROJECT(TrackPerfWorkspace)
 
 #
 # Find and add all packages
@@ -34,4 +11,7 @@ FOREACH(package ${packages})
     ADD_SUBDIRECTORY(${package})
   ENDIF()
 ENDFOREACH()
+
+# Data
+# ADD_SUBDIRECTORY(data)
 

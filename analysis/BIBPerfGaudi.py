@@ -1,0 +1,131 @@
+from Gaudi.Configuration import *
+from Configurables import EventDataSvc, ApplicationMgr, k4DataSvc, EventSelector, EventCounter
+from Configurables import PodioInput, PodioOutput, InitializeDD4hep
+from Configurables import ACTSMergeHitCollections, ACTSMergeRelationCollections, ACTSSeededCKFTrackingAlg
+from Configurables import ACTSDuplicateRemoval, FilterTracksAlg, TrackTruthAlg, BIBKiller, TrackPerfHistAlg
+from Configurables import MarlinProcessorWrapper
+#from Configurables import GeoSvc
+
+# Read in Simulation Output Data
+podioevent = k4DataSvc("EventDataSvc", input = "output_digi.edm4hep.root")
+evtCount = EventCounter("Event Counter", Frequency = 100, OutputLevel=DEBUG)
+
+podioinput = PodioInput("PodioReader",
+        collections= [
+        "VXDBarrelHits", "ITBarrelHits", "OTBarrelHits",
+        "VXDEndcapHits", "ITEndcapHits", "OTEndcapHits",
+        "VXDBarrelHitsRelations", "ITBarrelHitsRelations",
+        "OTBarrelHitsRelations", "VXDEndcapHitsRelations",
+        "ITEndcapHitsRelations", "OTEndcapHitsRelations",
+        "MCParticle"], OutputLevel = WARNING)
+
+# Feed in Dectector Geometry
+detectors_to_use = '/isilon/export/home/sferrar2/Container/detector-simulation/geometries/MuColl_v1.0.1/MuColl_v1.xml'
+#geoservice = GeoSvc("GeoSvc", detectors = detectors_to_use, OutputLevel = INFO)
+
+# Initialize DD4hep
+InitDD4hep = InitializeDD4hep("DD4hep Initializer",
+                              DD4hepXMLFile = detectors_to_use,
+                              EncodingString = "GlobalTrackerReadoutID")
+InitDD4hep.OutputLevel = WARNING
+
+# Merge Track Collections into One Collection
+MyMergeTracks = ACTSMergeHitCollections("MergeTrackHits",
+                            InputCollection1 = "VXDBarrelHits",
+                            InputCollection2 = "ITBarrelHits",
+                            InputCollection3 = "OTBarrelHits",
+                            InputCollection4 = "VXDEndcapHits",
+                            InputCollection5 = "ITEndcapHits",
+                            InputCollection6 = "OTEndcapHits",
+                            OutputCollection = "MergedTrackerHits")
+MyMergeTracks.OutputLevel = WARNING
+
+# Merge Track Relation Collections into One Collection
+MyMergeAssociations = ACTSMergeRelationCollections("MergeAssociations",
+                            InputCollection1 = "VXDBarrelHitsRelations",
+                            InputCollection2 = "ITBarrelHitsRelations",
+                            InputCollection3 = "OTBarrelHitsRelations",
+                            InputCollection4 = "VXDEndcapHitsRelations",
+                            InputCollection5 = "ITEndcapHitsRelations",
+                            InputCollection6 = "OTEndcapHitsRelations",
+                            OutputCollection = "MergedTrackerHitsRelations")
+MyMergeAssociations.OutputLevel = WARNING
+
+# Perform Reconstruction
+MyCKFTracking = ACTSSeededCKFTrackingAlg("Reconstructor",
+                            CKF_Chi2CutOff = 10,
+                            CKF_NumMeasurementsCutOff = 1,
+                            MatFile = "data/material-maps.json",
+                            RunCKF = "True",
+                            SeedFinding_CollisionRegion = 1,
+                            SeedFinding_DeltaRMax = 80,
+                            SeedFinding_DeltaRMin = 5,
+                            SeedFinding_MinPt = 500,
+                            SeedFinding_RMax = 150,
+                            SeedFinding_RadLengthPerSeed = 0.1,
+                            SeedFinding_SigmaScattering = 50,
+                            SeedingLayers = ["13", "2", "13", "6", "13", "10", "13", "14", "14", "2", "14", "6", "14", "10", "14", "14", "15", "2", "15", "6", "15", "10", "15", "14"],
+                            TGeoFile = "data/MuColl_v1.root",
+                            OutputTrackCollectionName = "AllTracks",
+                            OutputSeedCollectionName = "SeedTracks",
+                            InputTrackerHitCollectionName = "MergedTrackerHits")
+MyCKFTracking.OutputLevel = WARNING
+
+# Remove Duplicate Tracks
+MyTrackDeduper = ACTSDuplicateRemoval("Deduper",
+                                InputTrackCollectionName = "AllTracks",
+                                OutputTrackCollectionName = "DedupedTracks")
+MyTrackDeduper.OutputLevel = WARNING
+
+# Filter Tracks
+MyTrackFilter = FilterTracksAlg("Filterer",
+                            InputTrackCollectionName = "DedupedTracks",
+                            MinPt = "0.5",
+                            NHitsInner = "0",
+                            NHitsOuter = "0",
+                            NHitsTotal = "0",
+                            NHitsVertex = "0",
+                            OutputTrackCollectionName = "SiTracks")
+MyTrackFilter.OutputLevel = WARNING
+
+# Association Tracks with MCParticles
+MyTrackTruth = TrackTruthAlg("AssociationCreator",
+                            OutputParticle2TrackRelationName = "MCParticle_bkTracks",
+                            InputTrackCollectionName = "BIBKilledTracks",
+                            InputTrackerHit2SimTrackerHitRelationName = "MergedTrackerHitsRelations")
+MyTrackTruth.OutputLevel = WARNING
+
+# Kill the BIB
+MyBIBKiller = BIBKiller("Killer",
+                        InputTrackCollectionName = "SiTracks",
+                        OutputTrackCollectionName = "BIBKilledTracks")
+MyBIBKiller.OutputLevel = WARNING
+
+# Create Reconstruction Performance Histograms
+MyTrackPerf = TrackPerfHistAlg("TrackPerformance",
+                          InputMCParticleCollectionName = "MCParticle",
+                          InputMCTrackRelationCollectionName = "MCParticle_bkTracks",
+                          InputTrackCollectionName = "BIBKilledTracks")
+MyTrackPerf.OutputLevel = WARNING
+
+# Build Algorithm
+algList = [evtCount, podioinput, InitDD4hep,
+           MyMergeTracks, MyMergeAssociations,
+           MyCKFTracking,
+           MyTrackDeduper, MyTrackFilter,
+           MyBIBKiller, MyTrackTruth, MyTrackPerf
+]
+
+THistSvc().Output = ["histos DATAFILE='BIBhistograms.root' TYP='ROOT' OPT='RECREATE'"]
+THistSvc().PrintAll = True
+THistSvc().AutoSave = True
+THistSvc().AutoFlush = True
+
+# Run it
+from Configurables import ApplicationMgr
+ApplicationMgr( TopAlg = algList,
+                EvtSel = 'NONE',
+                EvtMax   = 10000,
+                ExtSvc = [podioevent],#, geoservice],
+                OutputLevel=WARNING
+              )

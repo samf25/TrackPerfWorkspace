@@ -12,7 +12,6 @@ FILE( GLOB _plugin_sources src/*.cxx )
 gaudi_add_module(InitDD4hepPlugins
 		SOURCES		${_plugin_sources}
 		LINK		Gaudi::GaudiKernel
-        			Gaudi::GaudiAlgLib
 				${ROOT_LIBRARIES}
         			${DD4hep_LIBRARIES}
         			k4FWCore::k4FWCore )

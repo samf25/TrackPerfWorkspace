@@ -32,8 +32,8 @@ evtsvc = EventDataSvc("EventDataSvc")
 
 # Declare the IOSvc and pass the input to it
 svc = IOSvc("IOSvc")
-svc.Input = "output_reco.edm4hep.root"
-svc.Output = "output_text.edm4hep.root"
+svc.Input = "output_test.edm4hep.root"
+svc.Output = "output_out.edm4hep.root"
 
 from Configurables import EDM4hep2LcioTool, Lcio2EDM4hepTool
 edm4hep2LcioConv = EDM4hep2LcioTool("EDM4hep2Lcio")
